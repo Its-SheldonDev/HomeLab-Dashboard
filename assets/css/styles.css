@@ -1,27 +1,44 @@
+/*=============== GOOGLE FONTS ===============*/
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&family=Lora:wght@500;600&family=Poppins:wght@400;500&display=swap");
+
+:root {
+    /*========== Colors ==========*/
+    --first-color: hsl(19, 64%, 54%);
+    --header-color: #121230;
+    --background-color: #0a0a20;
+    --text-color: #f23d7a;
+    --text-color-light: hsl(0, 0%, 100%);
+    --body-color: #fff1eb;
+
+    /*========== Font and typography ==========*/
+    --body-font: "Poppins", sans-serif;
+    --title-font: "Lora", serif;
+    --subtitle-font: "Dancing Script", cursive;
+}
+
+/*=============== BASE ===============*/
+
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: var(--body-font);
     margin: 0;
     padding: 0;
-    background-color: #343540;
-    color: white;
+    background-color: var(--background-color);
+    color: var(--body-color);
 }
 
 header {
-    background-color: #1a1c1d;
-    color: white;
+    background-color: var(--header-color);
+    color: var(--text-color-light);
     text-align: center;
     padding: 1em;
     position: relative;
     display: flex;
+    justify-content: center;
     align-items: center;
 }
 
 .logo-container {
     margin-right: 20px;
-}
-
-.title-container {
-    flex-grow: 1;
 }
 
 .logo {
@@ -37,11 +54,11 @@ header {
 }
 
 footer {
-    background-color: #1a1c1d;
-    color: white;
+    background-color: var(--header-color);
+    color: var(--text-color-light);
     text-align: center;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: var(--body-font);
     letter-spacing: 0.1em;
     padding: 1em;
     position: fixed;
@@ -56,11 +73,11 @@ footer a {
 }
 
 footer a:hover {
-    color: #ff4081;
+    color: var(--text-color);
 }
 
 .heart {
-    color: #ff4081;
+    color: var(--text-color);
     display: inline-block;
     animation: heartbeat 1s infinite;
     font-size: 1.5em;
@@ -77,8 +94,7 @@ nav ul {
 }
 
 nav ul li {
-    --c: #8e44ad;
-    color: var(--c);
+    --c: var(--text-color);
     font-size: 16px;
     border: 0.3em solid var(--c);
     border-radius: 0.5em;
@@ -86,7 +102,7 @@ nav ul li {
     height: 3em;
     text-transform: uppercase;
     font-weight: bold;
-    font-family: sans-serif;
+    font-family: var(--body-font);
     letter-spacing: 0.1em;
     text-align: center;
     line-height: 3em;
